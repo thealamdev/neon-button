@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+body {
+    background: #291e1e;
+}
+
+
+
+:root {
+    --bg_color: #04fc42;
+    --bg_color2: #0471ff;
+    --bg_color3: #ea00ff;
+}
+
+
+
+
+/* =================== main css =============== */
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+a {
+    color: white;
+    font-size: 17px;
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 40px;
+    transition: 0.4s;
+    overflow: hidden;
+     
+}
+
+
+ 
+
+.one:hover {
+    color: white;
+    background: var(--bg_color);
+    box-shadow: 0 0 10px var(--bg_color), 0 0 20px var(--bg_color), 0 0 60px var(--bg_color), 0 0 10px var(--bg_color);
+}
+
+.two:hover {
+    color: white;
+    background: var(--bg_color2);
+    box-shadow: 0 0 10px var(--bg_color2), 0 0 20px var(--bg_color2), 0 0 60px var(--bg_color2), 0 0 10px var(--bg_color2);
+}
+
+.three:hover {
+    color: white;
+    background: var(--bg_color3);
+    box-shadow: 0 0 10px var(--bg_color3), 0 0 20px var(--bg_color3), 0 0 60px var(--bg_color3), 0 0 10px var(--bg_color3);
+}
+
+.one::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 300%;
+    background: var(--bg_color);
+    transition: 0.4s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s *var(--i));
+}
+
+
+.two::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 300%;
+    background: var(--bg_color2);
+    transition: 0.4s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s *var(--i));
+}
+
+
+.three::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 300%;
+    background: var(--bg_color3);
+    transition: 0.4s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s *var(--i));
+}
+
+.one:hover::before {
+    width: 120%;
+}
+
+.two:hover::before {
+    width: 120%;
+}
+
+.three:hover::before {
+    width: 120%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.one::after {
+    content: '';
+    position: absolute;
+    background: #291e1e;
+    inset: 4px;
+    transition: 0.4s;
+}
+
+.two::after {
+    content: '';
+    position: absolute;
+    background: #291e1e;
+    inset: 4px;
+    transition: 0.4s;
+}
+
+.three::after {
+    content: '';
+    position: absolute;
+    background: #291e1e;
+    inset: 4px;
+    transition: 0.4s;
+}
+
+.one:hover::after {
+    background: var(--bg_color1);
+}
+
+.two:hover::after {
+    background: var(--bg_color2);
+}
+
+.three:hover::after {
+    background: var(--bg_color3);
+}
+
+a span {
+    z-index: 100;
+}
